@@ -39,7 +39,7 @@ def read_configuration(filePath):
 
 
 if __name__ == "__main__":
-    tomlFiles = [Path("runs_compare_rank/run_1_low.toml"),Path("runs_compare_rank/run_2_low.toml"),Path("runs_compare_rank/run_3_low.toml"),Path("runs_compare_rank/run_4_low.toml"),Path("runs_compare_rank/run_5_low.toml"),Path("runs_compare_rank/run_6_low.toml")]
+    tomlFiles = [Path("runs_compare_rank/run_1.toml"),Path("runs_compare_rank/run_2.toml"),Path("runs_compare_rank/run_3.toml"),Path("runs_compare_rank/run_4.toml"),Path("runs_compare_rank/run_5.toml"),Path("runs_compare_rank/run_6.toml"),Path("runs_compare_rank/run_7.toml"),Path("runs_compare_rank/run_8.toml"),Path("runs_compare_rank/run_9.toml"),Path("runs_compare_rank/run_10.toml"),Path("runs_compare_rank/run_11.toml"),Path("runs_compare_rank/run_12.toml"),Path("runs_compare_rank/run_13.toml"),Path("runs_compare_rank/run_14.toml"),Path("runs_compare_rank/run_15.toml"),Path("runs_compare_rank/run_16.toml"),Path("runs_compare_rank/run_17.toml"),Path("runs_compare_rank/run_18.toml"),Path("runs_compare_rank/run_19.toml"),Path("runs_compare_rank/run_20.toml"),Path("runs_compare_rank/run_21.toml"),Path("runs_compare_rank/run_22.toml"),Path("runs_compare_rank/run_23.toml"),Path("runs_compare_rank/run_24.toml"),Path("runs_compare_rank/run_25.toml"),Path("runs_compare_rank/run_26.toml"),Path("runs_compare_rank/run_27.toml"),Path("runs_compare_rank/run_28.toml"),Path("runs_compare_rank/run_29.toml"),Path("runs_compare_rank/run_30.toml")]
     ranks_history = []
     epochs_global = 0
     print(tomlFiles)
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     fig.tight_layout()
 
     # Save the figure
-    plt.savefig("rank_plot_low.png", dpi=300)
+    plt.savefig("rank_plot.png", dpi=300)
 
     # Show the plot
     plt.show()
