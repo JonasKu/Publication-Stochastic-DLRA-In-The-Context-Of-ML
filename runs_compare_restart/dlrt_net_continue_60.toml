@@ -1,0 +1,33 @@
+# Example configuration file
+[settings]
+learningRate = 0.01
+batchSize = 64
+numEpochs = 100
+RobbinsMonro = true
+logName = "dynamical_low_rank.log"
+
+# define network architecture
+# possible layer types are 'dense', 'lowRank', 'augmentedLowRank', and 'vanillaLowRank'
+# possible activations are 'relu', 'linear', 'sigmoid', 'tanh'
+[[layer]]
+type = 'augmentedLowRank'
+loadFile = 'runs_compare_restart/dlrt_net_60/_hidden_1'
+dims = [784, 512]
+activation = 'relu'
+rank = 100
+tol = 0.01
+
+[[layer]]
+type = 'augmentedLowRank'
+loadFile = 'runs_compare_restart/dlrt_net_60/_hidden_2'
+dims = [512, 256]
+activation = 'relu'
+rank = 100
+tol = 0.01
+
+[[layer]]
+type = 'dense'
+loadFile = 'runs_compare_restart/dlrt_net_60/_hidden_3'
+dims = [256, 10]
+activation = 'linear'
+ 

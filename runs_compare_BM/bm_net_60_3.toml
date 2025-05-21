@@ -1,0 +1,27 @@
+# Example configuration file
+[settings]
+learningRate = 0.00001
+batchSize = 64
+numEpochs = 100
+logName = "dynamical_low_rank.log"
+
+# define network architecture
+# possible layer types are 'dense', 'lowRank', 'augmentedLowRank', and 'vanillaLowRank'
+# possible activations are 'relu', 'linear', 'sigmoid', 'tanh'
+[[layer]]
+type = 'Burer-Monteiro'
+dims = [784, 512]
+activation = 'softplus'
+rank = 15
+
+[[layer]]
+type = 'Burer-Monteiro'
+dims = [512, 256]
+activation = 'softplus'
+rank = 16
+
+[[layer]]
+type = 'dense'
+dims = [256, 10]
+activation = 'linear'
+ 
